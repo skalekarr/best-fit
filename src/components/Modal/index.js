@@ -32,7 +32,7 @@ const CustomModal = ({
   return (
     <Modal show={modal.active} onHide={close}>
       <Modal.Header>
-        <Modal.Title className="modal-title" style={{ display: 'inline-block' }}>Choose your size</Modal.Title>
+        <Modal.Title className="modal-title" style={{ display: 'inline-block' }}>Best Fit</Modal.Title>
         <Button className="close" bsStyle="link" onClick={close} style={{ display: 'inline-block', float: 'right' }}>
           <span>&times;</span>
         </Button>

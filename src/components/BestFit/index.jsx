@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { Form, FormGroup, Col, Button, Checkbox, ControlLabel, FormControl, Image } from 'react-bootstrap';
+import { Form, FormGroup, Col, Button, /* Checkbox, */ ControlLabel, FormControl, Image } from 'react-bootstrap';
 
 import { toggleModal, updateProduct, saveSize, getSize } from '../../actions/action-creators/app';
 import Recommendation from '../Recommendations';
@@ -78,7 +78,7 @@ export class BestFit extends Component {
     }
 
     render() {
-        const { waist, shoulder, height, checked, sizeState } = this.state;
+        const { waist, shoulder, height,/*  checked, */ sizeState } = this.state;
         const { waistError, shoulderError, heightError } = this.state;
         const { recommendations, image } = this.props;
 
@@ -133,7 +133,6 @@ export class BestFit extends Component {
 
                             <FormGroup>
                                 <Col smOffset={2} sm={8}>
-                                    Not interested in giving details .... ?
                                     <Button className="btn btn-warning" onClick={() => this.checkSize('chart')}>view our size chart</Button>                                    
                                 </Col>
                             </FormGroup>
@@ -169,7 +168,7 @@ export class BestFit extends Component {
                         <br />
                         <FormGroup>
                             <Col smOffset={2} sm={4}>
-                                <Button onClick={() => this.showNext('enterValues')} bsStyle="primary">Prev</Button>
+                                <a className="margin-top underline" onClick={() => this.showNext('enterValues')} bsStyle="primary">Edit Details</a>
                             </Col>
                             <Col smOffset={2} sm={4}>
                                 <Button onClick={this.submit} bsStyle="primary">Submit</Button>

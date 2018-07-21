@@ -32,8 +32,8 @@ class Recommendation extends Component{
                     selected === 'prev' &&
                     <div>
                         <Col sm={3}>
-                            <p>Size: {size1}</p>
-                            <p>Fit: {fit1}</p>
+                            <p><b>Size:</b> {size1}</p>
+                            <p><b>Fit:</b> {fit1}</p>
                         </Col>
                         <Col sm={9} className="border border-primary">
                             <Image src={image1} thumbnail />
@@ -44,8 +44,8 @@ class Recommendation extends Component{
                     selected === 'recommended' &&
                     <div>
                         <Col sm={3}>
-                            <p>Size: {size2}</p>
-                            <p>Fit: {fit2}</p>
+                            <p><b>Size:</b> {size2}</p>
+                            <p><b>Fit:</b> {fit2}</p>
                         </Col>
                         <Col sm={9} className="border border-primary">
                             <Image src={image2} thumbnail />
@@ -56,8 +56,8 @@ class Recommendation extends Component{
                     selected === 'next' &&
                     <div>
                         <Col sm={3}>
-                            <p>Size: {size3}</p>
-                            <p>Fit: {fit3}</p>
+                            <p><b>Size:</b> {size3}</p>
+                            <p><b>Fit:</b> {fit3}</p>
                         </Col>
                         <Col sm={9} className="border border-primary">
                             <Image src={image3} thumbnail />
@@ -84,9 +84,9 @@ Recommendation.defaultProps = {
     image1: 'https://image.ibb.co/jtN19J/underfit.png',
     image2: 'https://image.ibb.co/gxGHid/best.png',
     image3: 'https://image.ibb.co/i9vtOd/overfit.png',
-    size1: 'S',
-    size2: 'M',
-    size3: 'L',
+    size1: '2X',
+    size2: '3X',
+    size3: '4X',
     fit1: 'Regula',
     fit2: 'Petite',
     fit3: 'Tall'
